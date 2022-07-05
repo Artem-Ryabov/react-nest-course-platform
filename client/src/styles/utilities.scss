@@ -1,0 +1,43 @@
+.f {
+  --justify-content: space-evenly;
+  --align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: var(--justify-content, center);
+  align-items: var(--align-items, center);
+  align-content: center;
+
+  &-jc-spb {
+    --justify-content: space-between;
+  }
+
+  &-jc-strt {
+    --justify-content: start;
+  }
+
+  &-jc-end {
+    --justify-content: end;
+  }
+
+  &-ai-str {
+    --align-items: stretch;
+  }
+
+  &-clm {
+    flex-direction: column;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.app {
+  height: 100vh;
+  background-color: var(--clr-bs-100);
+}
+
+.container {
+  padding-inline: 10rem;
+}

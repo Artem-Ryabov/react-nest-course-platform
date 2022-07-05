@@ -1,15 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import axios, { HeadersDefaults } from 'axios';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+import './styles/reset.scss';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+axios.defaults.baseURL = 'http://localhost:4000';
+
+axios.defaults.headers = {
+  ...axios.defaults.headers,
+  'Access-Control-Allow-Origin': '*',
+  'Content-Type': 'application/json',
+} as HeadersDefaults;
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

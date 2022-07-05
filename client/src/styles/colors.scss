@@ -1,0 +1,13 @@
+.light-theme {
+  --clr-bs-0: #ffffff;
+  --clr-bs-100: #f7f7f7;
+  --clr-bs-200: #eeeeee;
+  --clr-bs-300: #e9e9e9;
+}
+
+.colors {
+  --clr-pr-300: #fe4081;
+  --clr-pr-700: #3f51b5;
+
+  --clr-gradient: linear-gradient(90deg, var(--clr-pr-700) 0%, var(--clr-pr-300) 100%);
+}
